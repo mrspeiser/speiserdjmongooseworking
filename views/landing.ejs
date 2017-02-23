@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Speiser(DJ).com</title>
+	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+</head>
+
+<style type="text/css">
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+}
+
+nav {
+	
+}
+
+ul {
+	list-style: none;
+
+}
+
+ul li {
+	font-family: "Monoton";
+	font-size: 30px;
+	margin-right: 15px;
+	
+
+}
+
+ul li a {
+	text-decoration: none;
+	color: #468EBD;
+
+}
+
+ul li a:hover {
+	text-decoration: underline;
+
+}
+
+p {
+	color: white;
+	font-family: "Monoton";
+	font-size: 95px;
+}
+
+p a {
+	text-decoration: none;
+	/*color: #468EBD;*/
+	color: white;
+}
+
+p a:hover{
+	text-decoration: underline;
+}
+
+
+h3 {
+	font-size: 45px;
+	margin: 0;
+	font-family: Arial;
+}
+
+input[type=text], input[type=email], input[type=password] {
+	margin: 8px;
+	padding: 10px 10px;
+	border-radius: 5px;
+	width: 70%;
+	font-size: 15px;
+	border: none;
+}
+
+input[type=submit] {
+	color: white;
+	border: none;
+	background-color: #468EBD;
+	margin: 10px;
+	width: 115px;
+	height: 30px;
+	border-radius: 7px;
+
+}
+	.form1 {
+		width: 300px;
+		height: 460px;
+		background-color: #7D7D7D;
+		position: absolute;
+		transition-property: all;
+		transition-duration: 1s;
+		display: inline-block;
+		z-index: 0;
+		transform: translateY(-500px);
+		left: 50%;
+		margin-left: -150px;
+		border-radius: 15px 15px;
+		text-align: center;
+
+	}	
+
+	.form2 {
+		width: 300px;
+		height: 225px;
+		background-color: #7D7D7D;
+		position: absolute;
+		transition-property: all;
+		transition-duration: 1s;
+		display: inline-block;
+		z-index: 1;
+		transform: translateY(-400px);
+		left: 50%;
+		margin-left: -150px;
+		border-radius: 15px 15px;
+		text-align: center;
+	}	
+	
+	.form3 {
+		width: 300px;
+		height: 400px;
+		background-color: #7D7D7D;
+		position: absolute;
+		transition-property: all;
+		transition-duration: 1s;
+		display: inline-block;
+		z-index: 3;
+		transform: translateY(-400px);
+		left: 50%;
+		margin-left: -150px;
+		border-radius: 15px 15px;
+		text-align: center;
+	}
+
+	.positionchange {
+		transform:translateY(70px);
+
+
+	}
+
+	.signupbutton {
+		color: ;
+	}
+
+	.loginbutton {
+		color: ;
+	}
+
+	.newsbutton {
+		color: ;
+	}
+
+	.wrap {
+		text-align: center;
+	}
+
+	.wrap2 { 
+		margin-top: -80px;
+		text-align: center;
+	}
+
+	.wrap li {
+		float: left;
+		text-align: center;
+		padding: 2px 5px;
+	}
+
+	.wrap ul {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+
+	.wrapimg {
+		text-align: center;
+		margin-top: 40px;
+	}
+	.top {
+		top: -50px;
+	}
+	.form1inputs {
+		margin-top: 20px;
+	}
+	.formtext {
+		font-size: 20px;
+		font-family: arial;
+	}
+
+</style>
+
+
+<body>
+
+<form class="form1" action="/adminpanel" method="POST">
+	<h3>Sign-Up</h3>
+	<div class="form1inputs">
+		<input type="text" name="firstname" placeholder="First Name">
+		<input type="text" name="lastname" placeholder="Last Name">
+		<input type="text" name="username" placeholder="Desired Username">
+		<input type="password" name="password" placeholder="password">
+		<input type="email" name="email" placeholder="email">
+		<input type="text" name="zipcode" placeholder="zip code">
+		<input class="submit1" type="submit">
+	</div>
+</form>
+
+
+<form class="form2" action="/adminpanel" method="POST">
+	<h3>Log-In</h3>
+	<input type="text" name="" placeholder="Username">
+	<input type="password" name="" placeholder="password">
+	<input class="submit2" type="submit">
+</form>
+
+
+<form class="form3" action="/" method="POST">
+	<h3>Newsletter</h3>
+	<p class="formtext">Music Releases</p>
+	<p class="formtext">Shows &amp; Private Events</p>
+	<p class="formtext">Contests &amp; Giveaways</p>
+	<p class="formtext">Merchandise</p>
+
+	<input type="email" name="email" placeholder="email">
+	<input type="text" name="zipcode" placeholder="zip code">
+	<input class="submit3" type="submit">
+</form>
+
+<div class="wrap">
+	<ul>
+		<li class="signupbutton"><a href="#">Sign-Up</a></li>
+		<li class="loginbutton"><a href="#">Log-In</a></li>
+		<li class="newsbutton"><a href="#">Newsletter</a></li>
+	</ul>
+</div>
+
+<div class= "wrapimg">
+	<img src="landingimage.jpg">
+</div>
+
+<div class="wrap2"><p><a href="/home">ENTER</a></p></div>
+
+<script type="text/javascript">
+	var form1 = document.querySelector('.form1')
+
+	document.querySelector('.signupbutton').addEventListener("click", function() {
+		form1.classList.toggle("positionchange");
+	});
+
+	var form2 = document.querySelector(".form2")
+
+	document.querySelector('.loginbutton').addEventListener("click", function() {
+		form2.classList.toggle("positionchange");
+	});
+
+	var form3 = document.querySelector(".form3")
+
+	document.querySelector('.newsbutton').addEventListener("click", function() {
+		form3.classList.toggle("positionchange");
+	});
+
+
+	// make submit buttons work independently
+	document.querySelector(".submit1").addEventListener("click", function() {
+		document.querySelector(".form1").submit();
+	});
+
+	document.querySelector(".submit2").addEventListener("click", function() {
+		document.querySelector(".form2").submit();
+	});
+
+	document.querySelector(".submit3").addEventListener("click", function() {
+		document.querySelector(".form3").submit();
+	});
+
+</script>
+
+
+</body>
+</html>

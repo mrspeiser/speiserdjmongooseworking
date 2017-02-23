@@ -1,0 +1,38 @@
+<% include ../partials/header %> 
+
+	<h3><a href="/adminpanel">Admin Home</a></h3>
+
+
+	<ul>	
+		<li><a href="/adminpanel/newpost">Post to home</a></li>
+		<li><a href="/adminpanel/users">Users</a></li>
+		<li><a href="/adminpanel/newsletters">Newsletter E-mails</a></li>
+	</ul>
+
+<div class="container">
+	<form action="/home" method="POST">
+		<div>
+			<input type="text" name="title" placeholder="title text">
+		</div>
+		
+		<div>
+			<input type="text" name="image" placeholder="add an image">
+		</div>
+
+		<div>
+			<input type="text" name="description" placeholder="post description">
+		</div>
+
+		<div>
+			<button>Submit!</button>
+		</div>
+	</form>
+</div>
+
+<script>
+
+$('.ui.sidebar')
+  .sidebar('toggle')
+;
+</script>
+<% include ../partials/footer %>

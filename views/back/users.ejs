@@ -1,0 +1,42 @@
+<% include ../partials/header %> 
+
+<h3><a href="/adminpanel">Admin Home</a></h3>
+
+
+	<ul>	
+		<li><a href="/adminpanel/newpost">Post to home</a></li>
+		<li><a href="/adminpanel/users">Users</a></li>
+		<li><a href="/adminpanel/newsletters">Newsletter E-mails</a></li>
+	</ul>
+
+
+
+<div>
+<h1>New Users Below!</h1>
+	<table>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Username</th>
+			<th>E-Mail</th>
+			<th>Zipcode</th>
+		</tr>
+      <% user.forEach(function(user){ %>
+      <div id="padding">
+        <tr>
+          <td><%= user.firstname %></td>
+          <td><%= user.lastname %></td>
+          <td><%= user.username %></td>
+          <td><%= user.email %></td>
+          <td><%= user.zipcode %></td>
+        </tr>
+       </div>
+        
+      <% }) %>
+	</table>
+
+
+</div>
+
+
+<% include ../partials/footer %>
